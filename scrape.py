@@ -185,7 +185,7 @@ for location_url in location_urls:
     store_number = location_url.split("/")[-1]
     phone = "<INACCESSIBLE>"
 
-    geo_json = extract_json(response_text.split("geo")[1].split("reviews")[0])[0]
+    geo_json = extract_json(response_text.split("geo\":")[1].split("reviews")[0])[0]
     latitude = geo_json["latitude"]
     longitude = geo_json["longitude"]
     hours = "<MISSING>"
